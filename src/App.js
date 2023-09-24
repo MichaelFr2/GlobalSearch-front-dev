@@ -10,17 +10,12 @@ import VacancyFeed from './pages/VacancyFeed/VacancyFeed';
 import VacancyDetailed from './pages/VacancyDetailed/VacancyDetailed';
 
 function App() {
-  const {tg, onToggleButton} = useTelegram();
+  const {tg, onToggleButton, data} = useTelegram();
 
   useEffect(() => {
     tg.ready();
+    console.log(data)
   }, []);
-  useEffect(() => {
-    tg.postEvent('web_app_data_send', {
-      data: 'user_visited_vacancies'
-    });
-  }, [tg]);
- 
 
   return (
     <div className="App">
