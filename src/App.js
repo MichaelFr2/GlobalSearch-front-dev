@@ -15,11 +15,11 @@ function App() {
   useEffect(() => {
     tg.ready();
   }, []);
-  useEffect(() => {
-    tg.postEvent('web_app_data_send', {
-      data: 'user_visited_vacancies'
-    });
-  }, [tg]);
+  // useEffect(() => {
+  //   tg.postEvent('web_app_data_send', {
+  //     data: 'user_visited_vacancies'
+  //   });
+  // }, [tg]);
  
 
   return (
